@@ -1,7 +1,7 @@
 import Component from '../component.js';
-import Header from '';
-import ImageList from '';
-import FilterImages from '';
+import Header from './header.js';
+import ImageList from './imageList.js';
+import FilterImages from './filter-images.js';
 import images from '../data/images.js';
 
 class App extends Component {
@@ -21,9 +21,8 @@ class App extends Component {
         const imageList = new ImageList(props);
         const imageListDOM = imageList.renderDOM();
 
-        const listSection = dom.querySelector('.cards');
+        const listSection = dom.querySelector('.list-section');
         listSection.appendChild(imageListDOM);
-
         const filterImages = new FilterImages({
             images: images,
             onFilter: (horns) => {
@@ -43,24 +42,27 @@ class App extends Component {
 
         const filterImagesDOM = filterImages.renderDOM();
 
-        const optionsSection = dom.querySelector('.horns');
+        const optionsSection = dom.querySelector('.options-section');
         optionsSection.appendChild(filterImagesDOM);
     }
 
     renderHTML() {
         return /*html*/`
+        <div>
             <header>
             </header>
 
             <main>
-                <select class="horns">
-                </select>
+                <section class="options-section">
+                </section>
 
-                <ul id="cards">
+                <section class="list-section">
+                </section>
             </main>
 
             <footer>
             </footer>
+        </div>
         `;
     }
 }
