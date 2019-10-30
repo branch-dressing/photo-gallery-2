@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Slab';
+    width: 850px;
+    margin: 0 auto;
+}
+
+header img {
+    height: 50px;
+    width: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    align-self: flex-end;
+    font-family: 'Josefin Slab';
+    background-color: #3401cc;
+    color: white;
+    font-size: 18px;
+    border: solid 2px #ff3299
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 250px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3e3e3e;
+    border: solid 2px #3401cc;
+}
+
+li:nth-child(even) {
+    border: solid 2px #ff3299;
+}
+
+li:nth-child(odd) img {
+    border: solid 2px #ff3299;
+}
+
+li img {
+    width: 200px;
+    border: solid 2px #3401cc;
+}
+
+h3 {
+    font-size: 12px;
+    text-align: center;
+}
