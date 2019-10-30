@@ -27,7 +27,6 @@ class App extends Component {
             images: images,
             onFilter: (horns) => {
                 let filteredImage;
-                debugger;
                 if (!horns) {
                     filteredImage = images.horns;
                 } else {
