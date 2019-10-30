@@ -27,11 +27,12 @@ class App extends Component {
             images: images,
             onFilter: (horns) => {
                 let filteredImage;
+                debugger;
                 if (!horns) {
-                    filteredImage = images;
+                    filteredImage = images.horns;
                 } else {
                     filteredImage = images.filter(item => {
-                        return item.type === horns;
+                        return item.horns === horns;
                     });
                 }
 
